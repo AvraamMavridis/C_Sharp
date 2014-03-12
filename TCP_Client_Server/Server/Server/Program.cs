@@ -36,11 +36,10 @@ namespace Server
                 msg.AddRange(message);
                 msg.RemoveAll(RemoveNull);
                 byte[] removemessage = msg.ToArray();
-                sr.Flush();
                 Console.WriteLine(Encoding.ASCII.GetString(removemessage));
                
             }
-            sr.Close();
+           
         }
 
         private static bool RemoveNull(byte s){
